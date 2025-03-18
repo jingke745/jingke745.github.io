@@ -1,0 +1,17 @@
+<figure>
+    <h2>PDF宇宙</h2>
+<img src="內頁.png" width="1500" height="1000">
+<figcaption>在這學期之前是七個成員的QQ</figcaption>
+</figure>
+
+<audio controls>
+<source src="2.mp3">
+</audio>
+
+<video controls autoplay width="555"><source src="2024總結.mov">
+</video>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/edufWkhNzig?si=Q9z39eag_YuAptDq" 
+title="YouTube video player" frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

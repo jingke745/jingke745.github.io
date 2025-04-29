@@ -1,29 +1,41 @@
 <html>
     <head>
+            <meta charset="UTF-8">
+            <title>張平安的日記</title>
         <style>
-            body {background-color: #ffffff;}
+            body {background-color: #ffffff;
+            font-family: "微軟正黑體", sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            }
             h1 {
                 text-shadow: 12px 12px 2px #2cf4cd;
                 font-size: 72px;
                 color: #000000;
                 font-weight: bold;
+                margin-top: 40px;
             }
-            ul {list-style-type: square;}
+            ul{list-style-type: square;
+                padding: 0;
+                margin-bottom: 20px;
+            }
         
             li {
                 display: inline;
-                margin-right: 15px;
+                margin-right: 20px;
             }
         
             #bottom {
                 position: fixed;
-                right: 0px;
-                bottom: 0px;
+                right: 20px;
+                bottom: 20px;
                 background-color: lightgray;
-                padding: 5px 10px;
+                padding: 6px 12px;
                 text-decoration: none;
                 color: black;
-                border-radius: 8px;
+                border-radius: 10px;
+                font-weight: bold;
             }
             p {
                 background-color: antiquewhite;
@@ -35,56 +47,106 @@
                 color: #000000;
                 display: list-item;
             }
+            
+            .entry img {
+                margin-top: 10px;
+                border-radius: 10px;
+            }
+
+            .entry ul li {
+                font-size: 20px;
+                color: #000000;
+                display: list-item;
+            }
+
+            .question {
+                font-size: 24px;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+            .entry {
+                    background-color: #f9f9f9;
+                    padding: 20px;
+                    border-radius: 15px;
+                    margin-bottom: 25px;
+                    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+                    }
+
+            .entry h1 {
+                    font-size: 72px;
+                    color: #000;
+                    font-weight: bold;
+                    text-shadow: 12px 12px 2px #2cf4cd;
+                    }
+
+            .entry p {
+                    font-size: 26px;
+                    color: #000;
+                    }
+
+            .entry ul {
+                    padding-left: 30px;
+                    margin-top: 10px;
+                    }
+
+            .entry li {
+                    font-size: 20px;
+                    color: #000;
+                        }
+
+            .question {
+                    font-size: 26px;
+                    font-weight: bold;
+                    }
+
         </style>
       
-        <title>張平安的日記</title>
+        
         
     </head>
 <body>
     <ul id="top">
         
         <li>nav1</li>
-        <li><a href="#p2">NAV2</a></li>
+        <li><a href="#p2">nav2</a></li>
         <li>nav 3</li>
     </ul>
     <a id="bottom" href="#top">BACK</a>
-
-        <h1  style="font-size: 72px; color:#000000; font-weight: bold;">張平安的日記</h1>
-        <p style="font-size: 26px; color:#000000">
-            DAY1<br>
-            我也不知道要寫什麼，就先這樣吧。<br>
-
+    
+    <div class="entry">
+        <h1>張平安的日記</h1>
+      
+        <p>DAY1<br>
+           我也不知道要寫什麼，就先這樣吧。
         </p>
-        <div class="answer">
-            
+      
+        <p class="question">Q1：張平安喜歡做什麼？</p>
+        <ul>
+          <li>畫圖</li>
+          <li>睡覺</li>
+          <li>吃飯</li>
+          <li>看小說</li>
+        </ul>
+      </div>
+      
         
-        
-    <ul>
-        <p style="font-size: 26px; color:#000000">Q1：張平安喜歡做什麼？</p>
-        <li style="font-size: 20px; color:#000000">畫圖</li>
-        <li style="font-size: 20px; color:#000000">睡覺</li>
-        <li style="font-size: 20px; color:#000000">吃飯</li>
-        <li style="font-size: 20px; color:#000000">看小說</li>
-    </ul>
-        </div>
-        <p style="font-size: 26px; color:#000000">Q1：張平安喜歡做什麼？</p>
-        <li style="font-size: 20px; color:#000000">畫圖</li>
-        <li style="font-size: 20px; color:#000000">睡覺</li>
-        <li style="font-size: 20px; color:#000000">吃飯</li>
-        <li style="font-size: 20px; color:#000000">看小說</li>
-    </ul>
+        <div class="entry">
         <p style="font-size: 26px; color:#000000">
             DAY2<br>
             今天看到狗蛋在跳胡旋舞，好蠢。<br>
             比起妙音漫舞，我更喜歡中國文學史。<br>
-            <img src="狗蛋胡旋舞.PNG" width="300" height="300">
+            <img src="狗蛋胡旋舞.PNG" width="300" height="300" alt="狗蛋跳胡旋舞">
         </p>
+        </div>
+        <div class="entry">
         <p style="font-size: 26px; color:#000000">
             DAY3<br>
             趕羚羊草枝擺，今天超熱。<br>
             聯合的天氣可以再糟糕一點。<br>
             我想回宿舍吃冰。<br>
         </p>
+        </div>
+        <div class="entry">
         <p style="font-size: 26px; color:#000000">
             DAY4<br>
             下雨。<br>
@@ -94,12 +156,16 @@
             <img src="雨天畫圖.PNG" width="300" height="300"><br>
             林秋月被猴子臭說是自私的女人:P<br>
         </p>
+        </div>
+        <div class="entry">
         <p style="font-size: 26px; color:#000000">
             DAY5<br>
             趕羚羊草枝擺，今天被投訴了。<br>
             宿舍的臭婊子因為我對她笑了一下，寫了客訴單給我。<br>
             草擬媽該死的破工作<br>
         </p>
+        </div>
+        <div class="entry">
         <p style="font-size: 26px; color:#000000">
             DAY6<br>
             趕羚羊草枝擺，今天又被投訴了。<br>
@@ -107,6 +173,8 @@
             草擬媽該死的破工作<br>
             數學不好還讀理工。<br>
         </p>
+        </div>
+        <div class="entry">
         <p style="font-size: 26px; color:#000000">
             DAY7<br>
             趕羚羊草枝擺，今天被上頭約談了。<br>
@@ -115,6 +183,7 @@
             這是我的問題嗎？<br>
             又不是我態度不好。<br>
         </p>
-
+        </div>
+    
 </body>
 </html>

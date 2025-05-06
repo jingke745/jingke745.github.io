@@ -1,43 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>六師父是小逃兵</title>
 <figure>
-    <h1  style="font-size: 72px; color: #000000; font-weight: bold;">PDF觀察日記</h1>
-    <p1style="font-size: 40px; color: #000000; font-weight: bold;>紀念六師父與我們一起走過的大學時光<br>
-        她不在我們身邊了，嗚嗚嗚嗚嗚<br>
-    
-    </p1>
+  <h1  style="font-size: 72px; color: #000000; font-weight: bold;">PDF觀察日記</h1>
+  <pstyle="font-size: 40px; color: #000000; font-weight: bold;>紀念六師父與我們一起走過的大學時光<br>
+      她不在我們身邊了，嗚嗚嗚嗚嗚<br>
+  
+  </p>
 
 <style>
-  body {
-    background-color: #f0f8ff;
+body{
+  background-color: #d2c1f2;
+}
+footer.contact {
+  background-color: #f3f3f3;
+  padding: 20px;
+  text-align: center;
+  border-top: 2px solid #ccc;
+  margin-top: 40px;
+}
+
+footer.contact a {
+  text-decoration: none;
+  color: #000;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+footer.contact .avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 5px;
+}
+
+.marquee-container {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      height: 1000px;
+    }
+
+    .marquee-content {
+      display: flex;
+      animation: scroll-left 15s linear infinite;
+    }
+
+    .marquee-content img {
+      width: 1500px;
+      height: 1000px;
+      flex-shrink: 0;
+    }
+
+    @keyframes scroll-left {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+</style>
+
+<meta charset="UTF-8">
+<title>漫畫閱讀器</title>
+<style>
+  .comic-container {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 4px solid #ccc;
+    border-radius: 12px;
+    box-shadow: 0 0 15px #aaa;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .comic-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .buttons {
+    margin-top: 10px;
+  }
+
+  .buttons button {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2cf4cd;
+    color: #000;
+    cursor: pointer;
+  }
+
+  .buttons button:hover {
+    background-color: #1fc2a4;
   }
 </style>
 
 
+</head>
+
+<body>
 
 <img src="內頁透明底.png" width="1500" height="1000" usemap="#charactermap" alt="角色圖">
 
 <map name="charactermap">
-  <!-- 左上：蔣春花 -->
-  <area shape="rect" coords="0,0,500,500" href="jiang.html" alt="蔣春花">
+<!-- 左上：蔣春花 -->
+<area shape="rect" coords="0,0,500,500" href="jiang.html" alt="蔣春花">
 
-  <!-- 中上：林狗蛋 -->
-  <area shape="rect" coords="500,0,1000,500" href="lin.html" alt="林狗蛋">
+<!-- 中上：林狗蛋 -->
+<area shape="rect" coords="500,0,1000,500" href="lin.html" alt="林狗蛋">
 
-  <!-- 中上頭上的石頭：李鋼砲 -->
-  <area shape="circle" coords="750,150,60" href="stone.html" alt="李鋼砲">
+<!-- 中上頭上的石頭：李鋼砲 -->
+<area shape="circle" coords="750,150,60" href="stone.html" alt="李鋼砲">
 
-  <!-- 右上：617 -->
-  <area shape="rect" coords="1000,0,1500,500" href="617.html" alt="617">
+<!-- 右上：617 -->
+<area shape="rect" coords="1000,0,1500,500" href="617.html" alt="617">
 
-  <!-- 左下：高射炮 -->
-  <area shape="rect" coords="0,500,500,1000" href="gao.html" alt="高射炮">
+<!-- 左下：高射炮 -->
+<area shape="rect" coords="0,500,500,1000" href="gao.html" alt="高射炮">
 
-  <!-- 中下：張平安 -->
-  <area shape="rect" coords="500,500,1000,1000" href="zhang.html" alt="張平安">
+<!-- 中下：張平安 -->
+<area shape="rect" coords="500,500,1000,1000" href="zhang.html" alt="張平安">
 
-  <!-- 右下：林秋月 -->
-  <area shape="rect" coords="1000,500,1500,1000" href="linqiu.html" alt="林秋月">
+<!-- 右下：林秋月 -->
+<area shape="rect" coords="1000,500,1500,1000" href="linqiu.html" alt="林秋月">
 </map>
 
 </figure>
-<a href=index.htm>jingke745.github.io
-/相遇.htm...</a>
+
+
+<div class="comic-container">
+  <img id="comic" class="comic-image" src="comic1.jpg" alt="漫畫頁面">
+  <div class="buttons">
+    <button onclick="prevPage()">上一頁</button>
+    <button onclick="nextPage()">下一頁</button>
+  </div>
+</div>
+
+<script>
+  const images = [
+    "images/comic1.png",
+    "images/comic2.png",
+    "images/comic3.png",
+    "images/comic4.png",
+    "images/comic5.png",
+    "images/comic6.png",
+    "images/comic7.png",
+    "images/comic8.png",
+    "images/comic9.png",
+    "images/comic10.png",
+    "images/comic11.png",
+    "images/comic12.png",
+  ];
+  let current = 0;
+
+  function showImage(index) {
+    const img = document.getElementById("comic");
+    img.src = images[index];
+  }
+
+  function prevPage() {
+    if (current > 0) {
+      current--;
+      showImage(current);
+    }
+  }
+
+  function nextPage() {
+    if (current < images.length - 1) {
+      current++;
+      showImage(current);
+    }
+  }
+
+  document.addEventListener("keydown", function(e) {
+    if (e.key === "ArrowRight") {
+      nextPage();
+    } else if (e.key === "ArrowLeft") {
+      prevPage();
+    }
+  });
+</script>
+
+
+
+
+<footer class="contact">
+  <a href="https://www.instagram.com/auuu_0422/" target="_blank">
+    <img src="avatar.jpg" alt="IG頭像" class="avatar">
+    <p>@auuu_0422</p>
+  </a>
+  <p>Email：lipuchen0609@gmail.com</p>
+  <p>沒有必要，請勿聯繫</p>
+</footer>
+
+</body>
+</html>

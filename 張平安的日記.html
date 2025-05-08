@@ -1,140 +1,101 @@
 <html>
-    <head>
-            <meta charset="UTF-8">
-            <title>張平安的日記</title>
-        <style>
-            body {background-color: #ffffff;
+<head>
+    <meta charset="UTF-8">
+    <title>張平安的日記</title>
+    <style>
+        body {
+            background-color: #ffffff;
             font-family: "微軟正黑體", sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 20px;
-            }
-            h1 {
-                font-size: 72px;color: #000;
-                font-weight: bold;text-shadow: 12px 12px 2px #2cf4cd;
-                margin-top: 40px;
-                text-align: center;
-                }
+        }
 
-            ul{list-style-type: square;
-                padding: 0;
-                margin-bottom: 20px;
-            }
-        
-            li {
-                display: inline;
-                margin-right: 20px;
-            }
-        
-            #bottom {
-                position: fixed;
-                right: 20px;
-                bottom: 20px;
-                background-color: lightgray;
-                padding: 6px 12px;
-                text-decoration: none;
-                color: black;
-                border-radius: 10px;
-                font-weight: bold;
-            }
-            
-            .answer li {
-                font-size: 20px;
-                color: #000000;
-                display: list-item;
-            }
-            
-            .entry img {
-                margin-top: 10px;
-                border-radius: 10px;
-            }
+        /* 導覽列樣式 */
+        #top-nav {
+            display: flex;
+            justify-content: center;
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
 
-            .entry ul li {
-                font-size: 20px;
-                color: #000000;
-                display: list-item;
-            }
+        #top-nav li {
+            list-style: none;
+            margin: 0 15px;
+        }
 
-            .question {
-                font-size: 24px;
-                font-weight: bold;
-                margin-bottom: 10px;
-            }
-            .entry {
-                    background-color: #f9f9f9;
-                    padding: 20px;
-                    border-radius: 15px;
-                    margin-bottom: 25px;
-                    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-                    }
+        #top-nav a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+            font-size: 18px;
+        }
 
-            .entry h1 {
-                    font-size: 72px;
-                    color: #000;
-                    font-weight: bold;
-                    text-shadow: 12px 12px 2px #2cf4cd;
-                    }
+        #top-nav a:hover {
+            color: #007BFF;
+        }
 
-            .entry p {
-                    font-size: 26px;
-                    color: #000;
-                    }
+        h1 {
+            font-size: 72px;
+            color: #000;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 40px;
+        }
 
-            .entry ul {
-                    padding-left: 30px;
-                    margin-top: 10px;
-                    }
+        #bottom {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background-color: lightgray;
+            padding: 6px 12px;
+            text-decoration: none;
+            color: black;
+            border-radius: 10px;
+            font-weight: bold;
+        }
 
-            .entry li {
-                    font-size: 20px;
-                    color: #000;
-                        }
+        .entry {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
 
-            .question {
-                    font-size: 26px;
-                    font-weight: bold;
-                    }
+        .entry p {
+            font-size: 26px;
+            color: #000;
+        }
 
-        </style>
-      
-        
-        
-    </head>
+        .entry img {
+            margin-top: 10px;
+            border-radius: 10px;
+        }
+
+        .question {
+            font-size: 26px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
 <body>
-    <ul class="nav nav-tabs">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Active</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#p2">Something else here</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Separated link</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-</ul>
 
-
-    <ul id="top">
-        
-        <li>nav1</li>
-        <li><a href="#p2">nav2</a></li>
-        <li>nav 3</li>
+    <!-- 新導覽列 -->
+    <ul id="top-nav">
+        <li><a href="#day1">DAY1</a></li>
+        <li><a href="#day4">DAY4</a></li>
+        <li><a href="#day10">DAY10</a></li>
+        <li><a href="#day12">DAY12</a></li>
     </ul>
-    <a id="bottom" href="#top">BACK</a>
-    
+
+    <a id="bottom" href="#top-nav">BACK</a>
+
     <h1>張平安的日記</h1>
-    <div class="entry">  
+    <div class="entry" id="day1">  
         <p>DAY1<br>
            我也不知道要寫什麼，就先這樣吧。
         </p>
@@ -165,7 +126,7 @@
             我想回宿舍吃冰。<br>
         </p>
         </div>
-        <div class="entry">
+        <div class="entry" id="DAY4">
         <p style="font-size: 26px; color:#000000">
             DAY4<br>
             下雨。<br>
@@ -226,8 +187,8 @@
             </p>
             </div>
             
-        <div class="entry">
-            <p id="p2" style="font-size: 26px; color:#000000">
+        <div class="entry" id="DAY10">
+            <p  style="font-size: 26px; color:#000000">
                  DAY10<br>
                  今天睡得還行，看來不會猝死了<br>
                  希望可以活到下一個大世紀<br>
@@ -243,8 +204,8 @@
             </p>
         </div>
 
-        <div class="entry">
-            <p style="font-size: 26px; color:#000000">
+        <div class="entry" id="DAY12">
+            <p  style="font-size: 26px; color:#000000">
                 DAY12<br>
                 我想吃雞排……<br>
                 但是沒人跟我一起點……<br>

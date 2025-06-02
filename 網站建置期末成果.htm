@@ -13,6 +13,7 @@
     body {
       background-color: #d2c1f2;
       padding: 20px;
+      font-family: "微軟正黑體", sans-serif;
     }
 
     footer.contact {
@@ -43,57 +44,28 @@
 
   /* 回到最上頁 */
     #bottom {
-            position: fixed;
-            right: 20px;
-            bottom: 20px;
-            background-color: lightgray;
-            padding: 6px 12px;
-            text-decoration: none;
-            color: black;
-            border-radius: 10px;
-            font-weight: bold;
-        }
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      background-color: lightgray;
+      padding: 6px 12px;
+      text-decoration: none;
+      color: black;
+      border-radius: 10px;
+      font-weight: bold;
+    }
 
-    #top-nav {
-            display: flex;
-            justify-content: center;
-            background-color: #f0f0f0;
-            padding: 10px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-        }
-
-    #top-nav li {
-            list-style: none;
-            margin: 0 15px;
-        }
-
-    #top-nav a {
-            text-decoration: none;
-            color: #000;
-            font-weight: bold;
-            font-size: 18px;
-        }
-
-    #top-nav a:hover {
-            color: #007BFF;
-        }
-
-
-    /* 清單上面ㄉ文字 */
-        .question {
-            font-size: 26px;
-            font-weight: bold;
-        }
-    /*HOVER效果*/
+    /* Hover 效果 + 熱區定位 */
     .map-container {
       position: relative;
-      width: 1500px;
+      width: 100%;
+      max-width: 1500px;
       margin: 0 auto;
     }
 
     .map-image {
       width: 100%;
+      height: auto;
       display: block;
       border-radius: 12px;
     }
@@ -126,7 +98,87 @@
       transition: 0.3s ease;
     }
 
+    /* 導覽列 */
 
+    .top-nav {
+      background-color: #4B0082; /* 深紫色 */
+      padding: 10px 0;
+      width: 100%;
+      margin: 0;
+      position: relative;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+
+    .top-nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 10px 0;
+    }
+
+    .top-nav li {
+      margin: 0 20px;
+    }
+
+    .top-nav a {
+      color: white;
+      font-size: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .top-nav a:hover {
+      color: #FFD700; /* 滑鼠滑過變金色 */
+    }
+
+  /* 主頁圖片點擊導覽 */
+    .map-container {
+      position: relative;
+      width: 100%;
+      max-width: 1500px;
+      margin: 0 auto;
+    }
+
+    .map-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+    }
+
+    .hotspot {
+      position: absolute;
+      cursor: pointer;
+    }
+
+    .hotspot span {
+      display: none;
+      position: absolute;
+      top: -30px;
+      left: 0;
+      background: rgba(0, 0, 0, 0.75);
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 16px;
+      white-space: nowrap;
+      z-index: 10;
+    }
+
+    .hotspot:hover span {
+      display: block;
+    }
+
+    .hotspot:hover {
+      box-shadow: 0 0 15px #2cf4cd;
+      transform: scale(1.05);
+      transition: 0.3s ease;
+    }
   </style>
     
 </head>
@@ -148,16 +200,9 @@
   <!-- 圖像地圖 -->
 <div class="map-container">
   <img src="內頁透明底.PNG" usemap="#charactermap" style="width: 100%; height: auto;" alt="角色圖">
-  <map name="charactermap">
-    <area shape="rect" coords="0,0,500,500" href="jiang.html" alt="蔣春花">
-    <area shape="rect" coords="500,0,1000,500" href="lin.html" alt="林狗蛋">
-    <area shape="circle" coords="750,150,60" href="stone.html" alt="李鋼砲">
-    <area shape="rect" coords="1000,0,1500,500" href="617.html" alt="617">
-    <area shape="rect" coords="0,500,500,1000" href="gao.html" alt="高射炮">
-    <area shape="rect" coords="500,500,1000,1000" href="zhang.html" alt="張平安">
-    <area shape="rect" coords="1000,500,1500,1000" href="linqiu.html" alt="林秋月">
-  </map>
-  
+
+<!-- 以下是改為百分比定位的熱區（總圖尺寸 1500x1000） -->
+
     <!-- 左上：蔣春花 -->
     <a href="jiang.html" class="hotspot" style="top: 4%; left: 7%; width: 25%; height: 18%;">
       <span>蔣春花</span>
@@ -205,7 +250,7 @@
 
 
             
-  <p style="font-size: 40px; color: #000000; font-weight: bold;">
+  <p style="font-size: 60px; color: #000000; font-weight: bold;">
     《PDF宇宙》漫畫<br>
   </p>
 
